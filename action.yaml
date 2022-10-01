@@ -1,0 +1,12 @@
+name: 'Comment creator'
+description: 'Create comments by eslint results'
+inputs:
+  token:
+    description: 'GITHUB_TOKEN or a repo scoped PAT.'
+    default: ${{ github.token }}
+  linterInput:
+    description: 'Eslint result in json'
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
